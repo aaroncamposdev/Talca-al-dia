@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "988863010537",
+    "firebase_url": "https://notificaciones-talca-digital-default-rtdb.firebaseio.com",
+    "project_id": "notificaciones-talca-digital",
+    "storage_bucket": "notificaciones-talca-digital.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988863010537:android:87bbb607d3fe5a9e2fc278",
+        "android_client_info": {
+          "package_name": "com.talcaaldia.cl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988863010537-3nj1jkrnvpconrp98nimpr3f0ijnpdi8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.talcaaldia.cl",
+            "certificate_hash": "e0ad19948cf152a264815f3a40e9aab43cf78c2c"
+          }
+        },
+        {
+          "client_id": "988863010537-qrp00je50qjfl98tcj5tjavf0qp16ueo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBAQRkHlVZhuXpp_pSUSf05sPXSA2vB02U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988863010537-qrp00je50qjfl98tcj5tjavf0qp16ueo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
