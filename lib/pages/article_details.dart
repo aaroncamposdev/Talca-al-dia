@@ -149,7 +149,7 @@ class _ArticleDetailsState extends State<ArticleDetails> {
                                                     .onBackground),
                                             child: AnimatedPadding(
                                               duration:
-                                                  Duration(milliseconds: 1000),
+                                                  Duration(milliseconds: 1500),
                                               padding: EdgeInsets.only(
                                                   left: 10,
                                                   right: _rightPaddingValue,

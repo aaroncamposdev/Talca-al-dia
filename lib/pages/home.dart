@@ -25,7 +25,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  
   int selectedIndex = 0;
   PageController? _pageController;
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -38,25 +37,25 @@ class _HomePageState extends State<HomePage> {
     Feather.user
   ];
 
-
-  _initData () async{
+  _initData() async {
     await AppService().checkInternet().then((bool? hasInternet) {
-      if (hasInternet != null  && hasInternet == true) {
-        context.read<CategoryBloc>().fetchData().then((value) => 
-        NotificationService().initFirebasePushNotification(context)
-        .then((_) => context.read<NotificationBloc>().checkSubscription()
-        .then((value){
-          if(AdConfig.isAdsEnabled){
-            AdConfig().initAdmob().then((value) => context.read<AdsBloc>().initiateAds());
-          }}
-        ))); 
-      }else{
+      if (hasInternet != null && hasInternet == true) {
+        context.read<CategoryBloc>().fetchData().then((value) =>
+            NotificationService().initFirebasePushNotification(context).then(
+                (_) => context
+                        .read<NotificationBloc>()
+                        .checkSubscription()
+                        .then((value) {
+                      if (AdConfig.isAdsEnabled) {
+                        AdConfig().initAdmob().then(
+                            (value) => context.read<AdsBloc>().initiateAds());
+                      }
+                    })));
+      } else {
         openSnacbar(scaffoldKey, 'no internet'.tr());
       }
     });
   }
-
-
 
   @override
   void initState() {
@@ -64,15 +63,13 @@ class _HomePageState extends State<HomePage> {
     _pageController = PageController();
     _initData();
 
-    Future.microtask((){
+    Future.microtask(() {
       context.read<SettingsBloc>().getPackageInfo();
       if (!context.read<UserBloc>().guestUser) {
         context.read<UserBloc>().getUserData();
       }
     });
   }
-
-  
 
   @override
   void dispose() {
@@ -83,45 +80,42 @@ class _HomePageState extends State<HomePage> {
   void onItemTapped(int index) {
     setState(() {
       selectedIndex = index;
-      
     });
-    _pageController!.animateToPage(index, duration: Duration(milliseconds: 500), curve: Curves.easeIn);
+    _pageController!.animateToPage(index,
+        duration: Duration(milliseconds: 500), curve: Curves.easeIn);
   }
 
-
-  Future _onWillPop () async{
-    if(selectedIndex != 0){
-      setState (()=> selectedIndex = 0);
-      _pageController!.animateToPage(0, duration: Duration(milliseconds: 500), curve: Curves.easeIn);
-    }else{
-      await SystemChannels.platform.invokeMethod<void>('SystemNavigator.pop', true);
+  Future _onWillPop() async {
+    if (selectedIndex != 0) {
+      setState(() => selectedIndex = 0);
+      _pageController!.animateToPage(0,
+          duration: Duration(milliseconds: 500), curve: Curves.easeIn);
+    } else {
+      await SystemChannels.platform
+          .invokeMethod<void>('SystemNavigator.pop', true);
     }
   }
-
-  
 
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: ()async => await _onWillPop(),
-          child: Scaffold(
-
-              key: scaffoldKey,
-              bottomNavigationBar: _bottonNavigationBar(context),
-              body: PageView(
-                physics: NeverScrollableScrollPhysics(),
-                allowImplicitScrolling: false,
-                controller: _pageController,
-                children: <Widget>[
-                  HomeTab(),
-                  VideoTab(),
-                  SearchTab(),
-                  BookmarkTab(),
-                  SettingPage()
-                ],
-              ),
-            
-          ),
+      onWillPop: () async => await _onWillPop(),
+      child: Scaffold(
+        key: scaffoldKey,
+        bottomNavigationBar: _bottonNavigationBar(context),
+        body: PageView(
+          physics: NeverScrollableScrollPhysics(),
+          allowImplicitScrolling: false,
+          controller: _pageController,
+          children: <Widget>[
+            HomeTab(),
+            VideoTab(),
+            SearchTab(),
+            BookmarkTab(),
+            SettingPage()
+          ],
+        ),
+      ),
     );
   }
 
@@ -131,12 +125,13 @@ class _HomePageState extends State<HomePage> {
       gapLocation: GapLocation.none,
       activeIndex: selectedIndex,
       iconSize: 22,
-      backgroundColor: Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+      backgroundColor:
+          Theme.of(context).bottomNavigationBarTheme.backgroundColor,
       activeColor: Theme.of(context).bottomNavigationBarTheme.selectedItemColor,
-      inactiveColor: Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
+      inactiveColor:
+          Theme.of(context).bottomNavigationBarTheme.unselectedItemColor,
       splashColor: Theme.of(context).primaryColor,
       onTap: (index) => onItemTapped(index),
     );
   }
-
 }

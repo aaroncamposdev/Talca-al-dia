@@ -14,7 +14,7 @@ class WpConfig {
     '1': [867, "Actualidad"],
     '2': [893, "Panoramas"],
     '3': [877, "Emprendimientos"],
-    '4': [881, "Historias"],
+    '4': [496, "Educación digital"],
   };
 
   /*

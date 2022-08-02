@@ -85,7 +85,7 @@ class _SearchPageState extends State<SearchPage> {
         textInputAction: TextInputAction.search,
         onFieldSubmitted: (value) {
           if (value == '' || value.isEmpty) {
-            openSnacbar(scaffoldKey, 'Type something!');
+            openSnacbar(scaffoldKey, 'Debes escribir almenos 3 carácteres');
           } else {
             setState(() => _searchStarted = true);
             data = WordPressService().fetchPostsBySearch(searchFieldCtrl.text);
