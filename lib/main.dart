@@ -25,7 +25,7 @@ void main() async {
       statusBarIconBrightness: Brightness.dark));
 
   runApp(EasyLocalization(
-    supportedLocales: [Locale('en'), Locale('ar'), Locale('es'), Locale('cl')],
+    supportedLocales: [Locale('en'), Locale('es')],
     path: 'assets/translations',
     fallbackLocale: Locale('en'),
 

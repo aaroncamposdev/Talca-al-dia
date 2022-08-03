@@ -9,7 +9,6 @@ import 'package:wordpress_app/utils/next_screen.dart';
 import 'package:wordpress_app/widgets/bookmark_icon.dart';
 import 'package:wordpress_app/widgets/video_icon.dart';
 
-
 //small card with right sight image
 class Card1 extends StatelessWidget {
   final Article article;
@@ -64,7 +63,7 @@ class Card1 extends StatelessWidget {
                                 left: 10, right: 10, top: 4, bottom: 4),
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(5),
-                                color: Colors.blueGrey[600]),
+                                color: Color(0xffeb0029)),
                             child: Text(
                               article.category!,
                               style: TextStyle(
@@ -76,26 +75,29 @@ class Card1 extends StatelessWidget {
                         ],
                       ),
                     ),
-                    SizedBox(width: 10,),
+                    SizedBox(
+                      width: 10,
+                    ),
                     Hero(
-                        tag: heroTag,
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            Container(
-                              height: 100,
-                              width: 100,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                              ),
-                              child: CustomCacheImage(
-                                  imageUrl: article.image, radius: 5.0),
+                      tag: heroTag,
+                      child: Stack(
+                        alignment: Alignment.center,
+                        children: [
+                          Container(
+                            height: 100,
+                            width: 100,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
                             ),
-
-                            VideoIcon(tags: article.tags, iconSize: 40,)
-                          ],
-                        ),
-                      
+                            child: CustomCacheImage(
+                                imageUrl: article.image, radius: 5.0),
+                          ),
+                          VideoIcon(
+                            tags: article.tags,
+                            iconSize: 40,
+                          )
+                        ],
+                      ),
                     )
                   ],
                 ),
@@ -128,7 +130,6 @@ class Card1 extends StatelessWidget {
                 ),
               ],
             )),
-        onTap: () => navigateToDetailsScreen(context, article, heroTag)
-        );
+        onTap: () => navigateToDetailsScreen(context, article, heroTag));
   }
 }

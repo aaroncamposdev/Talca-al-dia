@@ -14,8 +14,6 @@
 	<array>
 		<string>en</string>
 		<string>es</string>
-		<string>ar</string>
-		<string>cl</string>
 	</array>
 	<key>CFBundleName</key>
 	<string>Talca al día</string>

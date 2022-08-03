@@ -33,32 +33,44 @@ class WpConfig {
 
   // FEATURE IMGAE -  IF YOUR POSTS DON"T HAVE A FEATURE IMAGE
   static const String randomPostFeatureImage =
-      "https://innov8tiv.com/wp-content/uploads/2017/10/blank-screen-google-play-store-1280x720.png";
+      "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/cover-default.jpg?alt=media&token=622ecf2b-a530-4945-af63-d04d373fb7e8";
 
   // FEATURE CATEGORY IMGAE -  IF YOU HAVEN'T DEFINE A COVER IMAGE FOR A CATEGORY IN THE LIST BELOW
   static const String randomCategoryThumbnail =
-      "https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cmFuZG9tfGVufDB8MHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60";
+      "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Fdefault.jpg?alt=media&token=a40a1af0-5804-4298-9ffe-d5c5b7564386";
 
   // ENTER CATERGORY ID AND ITS COVERS IMAGE
   static const Map categoryThumbnails = {
     // categoryID : 'category thumbnail url'
+    // ARTE Y CULTURA
     861:
-        "https://images.unsplash.com/photo-1444653389962-8149286c578a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODV8fGJ1c2luZXNzfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Farte-y-cultura.jpg?alt=media&token=edd1fa35-f54d-4fed-a7ac-ecadd176bd1f",
+    // MEDIO AMBIENTE
     865:
-        "https://images.unsplash.com/photo-1603739903239-8b6e64c3b185?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fGVudGVydGFpbm1lbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Fmedio-ambiente.jpg?alt=media&token=0954f726-e062-4f67-b798-80f0e1efdcf0",
+    // ENTRETENIMIENTO Y PANORAMAS
     893:
-        "https://images.unsplash.com/photo-1507138086030-616c3b6dd768?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTE1fHxsaWZlc3R5bGV8ZW58MHwwfDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Fentretenimiento-y-panoramas.jpg?alt=media&token=c25cae7f-2a3c-408f-b731-2b12a219ab5b",
+    // ACTUALIDAD
     867:
-        "https://images.pexels.com/photos/1250655/pexels-photo-1250655.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Factualidad.jpg?alt=media&token=5f4678f9-d7df-4569-b1c2-59e252ae5059",
+    // EDUCACIÓN DIGITAL
     496:
-        "https://images.pexels.com/photos/2698475/pexels-photo-2698475.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Feducacion-digital.jpg?alt=media&token=f167d001-1116-40be-97a9-09f430c6fe63",
+    // EMPRENDIMIENTO
     877:
-        "https://images.unsplash.com/photo-1496065187959-7f07b8353c55?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c2NpZW5jZXxlbnwwfDB8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60",
+        "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Femprendimiento.jpg?alt=media&token=4e97f1bc-f859-4d8e-8a8d-30da87f5b5ec",
+    // ESPECTACULOS
     875:
-        "https://images.pexels.com/photos/2885940/pexels-photo-2885940.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Fespectaculos.jpg?alt=media&token=ab9bf8e8-dac7-42ad-9439-661010366f04",
+    // NOTICIAS
     881:
-        "https://images.pexels.com/photos/1036936/pexels-photo-1036936.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Fnoticias.jpg?alt=media&token=775344d2-87f7-4067-b3d0-e592934f09b5",
+    // TECNOLOGIA
     872:
-        "https://images.pexels.com/photos/3885493/pexels-photo-3885493.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+        "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Ftecnologia.jpg?alt=media&token=98e063c9-6f20-4331-b65e-faf3eb52f949",
+
+    // OTROS
+    1: "https://firebasestorage.googleapis.com/v0/b/notificaciones-talca-digital.appspot.com/o/Categor%C3%ADas%2Fotros.jpg?alt=media&token=56e22376-c687-4a9f-9fd0-c6f35c339059"
   };
 }

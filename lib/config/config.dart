@@ -23,9 +23,7 @@ class Config {
   //languages
   static const List<String> languages = [
     'English',
-    'Spanish',
-    'Arabic',
-    'Español'
+    'Español',
   ];
 
   //Image Assets
