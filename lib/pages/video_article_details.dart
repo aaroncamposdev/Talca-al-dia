@@ -171,7 +171,7 @@ class _VideoArticleDeatilsState extends State<VideoArticleDeatils> {
                                         width: 5,
                                       ),
                                       Text(
-                                        'By ${article.author}',
+                                        'Por ${article.author}',
                                         style: TextStyle(
                                             fontSize: 14,
                                             color: Theme.of(context)

@@ -217,7 +217,7 @@ class _ArticleDetailsState extends State<ArticleDetails> {
                                               width: 5,
                                             ),
                                             Text(
-                                              'By ${article.author}',
+                                              'Por ${article.author}',
                                               style: TextStyle(
                                                   fontSize: 14,
                                                   color: Theme.of(context)
